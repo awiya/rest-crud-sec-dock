@@ -26,6 +26,7 @@ public class EmployeeController {
      * this method has the following role: return the complete list of employees
      * @return
      */
+
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<Employee> getEmployees() {
@@ -36,7 +37,7 @@ public class EmployeeController {
     /***
      * this method has for role : return an employee, knowing his id
      * @param id the id of the Employee
-     * @return the saved employee
+     * @return the method returns the employee saved in JSON format
      * @throws EmployeeNotFoundException
      */
     @GetMapping("/{id}")
