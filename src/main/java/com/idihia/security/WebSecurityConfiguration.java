@@ -42,15 +42,6 @@ public class WebSecurityConfiguration {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    public UserDetailsService userDetailsService() {
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        manager.createUser(org.springframework.security.core.userdetails.User
-                .withUsername("user")
-                .password(passwordEncoder().encode("random-password"))
-                .roles("USER")
-                .build());
-        return manager;
-    }
+
 }
 
